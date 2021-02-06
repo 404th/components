@@ -1,0 +1,60 @@
+/* import laptopImage from './Laptop.svg'
+
+export const useStyles = () => ({
+  box:{
+    position:"relative",
+    width:"400px",
+    height:"200px",
+    transform:"perspective(500px) rotate(-40deg) skew(25deg)",
+    boxShadow:"-90px 75px 20px rgba( 0, 0, 0, .3 )",
+    background:`#fff url(${ laptopImage })`
+  },
+
+}) */
+
+.box {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  transform: perspective(500px) rotate(-40deg) skew(25deg);
+  box-shadow: -90px 75px 20px rgba(0, 0, 0, 0.3);
+  background: #fff url(./Laptop.svg);
+  background-repeat: no-repeat;
+  background-size: 320px;
+  background-position: 50% 50%;
+  transition: 0.5s;
+}
+
+.box:hover {
+  transform: perspective(500px) rotate(-40deg) skew(25deg)
+    translate(50px, -50px);
+  box-shadow: -150px 115px 100px rgba(0, 0, 0, 0.3);
+}
+
+.box::before {
+  content: "";
+  width: 90px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: skewY(-40deg) translate(-90px, -38px);
+  background: #e8e7ec url(./Laptop.svg);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.box::after {
+  content: "";
+  width: 100%;
+  height: 77px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: skewX(-50deg) translate(45px, 76px);
+  background: #e8e7ec url(./Laptop.svg);
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
