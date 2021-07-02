@@ -1,0 +1,14 @@
+::-moz-selection {
+    background: #ffe867;
+    color: #3f72af;
+}
+::selection {
+    background: #ffe867;
+    color: #3f72af;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
