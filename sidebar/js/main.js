@@ -5,26 +5,28 @@ let sidebar_li_a = document.querySelectorAll(".sidebar_body_li_a");
 
 function tgl() {
     sidebar.classList.toggle("sidebar_deactive");
-    for (let item of sidebar_li_a) {
-        if (arrayIfHasText(item.classList, "sidebar_a_deactive")) {
-            item.classList.remove("sidebar_a_deactive");
-            item.classList.add("sidebar_a_active");
+
+    for (let a of sidebar_li_a) {
+        if (arrayIfHasText(a.classList, "sidebar_a_deactive")) {
+            a.classList.remove("sidebar_a_deactive");
+            a.classList.add("sidebar_a_active");
+        } else if (arrayIfHasText(a.classList, "sidebar_a_active")) {
+            a.classList.remove("sidebar_a_active");
+            a.classList.add("sidebar_a_deactive");
         } else {
-            item.classList.remove("sidebar_a_active");
-            item.classList.add("sidebar_a_deactive");
+            console.log("What's up?");
         }
     }
 }
 
 // check if array includes txt or not
 function arrayIfHasText(arr = [], txt = "") {
-    for (let cl of arr) {
-        if (cl === txt) {
-            console.log("it includes");
+    for (let item of arr) {
+        if (item === txt) {
             return true;
         } else {
-            console.log("it not includes");
-            return false;
+            continue;
         }
     }
+    return false;
 }

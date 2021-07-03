@@ -15,85 +15,100 @@
         <link rel="stylesheet" href="./css/common.css" />
     </head>
     <body>
-        <div class="sidebar">
-            <div class="sidebar_header">
-                <span class="sidebar_header_span">For programmers</span>
-                <i
-                    class="bx bxs-chevron-left"
-                    id="chevron"
-                    onclick="tgl()"
-                ></i>
-                <input
-                    class="sidebar_header_input"
-                    type="search"
-                    name="sidebar_search"
-                    id="sidebar_search"
-                />
-            </div>
-            <ul class="sidebar_body">
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+        <!-- Sidebar-->
+        <div class="area"></div>
+        <nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="/">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-home fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Dashboard </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li class="has-subnav">
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-laptop fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Stars Components </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li class="has-subnav">
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-list fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Forms </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li class="has-subnav">
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-folder-open fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Pages </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-bar-chart-o fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Graphs and Statistics </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-font fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Quotes </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-table fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Tables </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-map-marker fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Maps </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+                <li>
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-info fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Documentation </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="#">
+                        <div class="sidebar_icons_icon centering">
+                            <i class="fa fa-power-off fa-2x"></i>
+                        </div>
+                        <span class="nav-text"> Logout </span>
+                    </a>
                 </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
-                </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
-                </li>
-                <li class="sidebar_body_li">
-                    <i class="bx bxs-user sidebar_body_li_i"></i>
-                    <a class="sidebar_body_li_a" href="#">Information</a>
-                </li>
-            <div class="sidebar_footer">
-                <img
-                    src="./img/user.jpg"
-                    alt="jojo"
-                    width="50px"
-                    height="50px"
-                />
-                <a href="#">Umarov D</a>
-                <i class="bx bxs-user"></i>
-            </div>
-        </div>
+            </ul>
+        </nav>
+        <!-- Sidebar End -->
         <script src="./js/main.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
