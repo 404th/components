@@ -3,7 +3,12 @@
 
 /* font-family: 'Prompt', sans-serif; */
 
---sidebar-width: 350px;
+:root {
+    --sidebar-width: 240px;
+    --sidebar-width-deactive: 50px;
+    --sidebar-body-li-height: 50px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -16,10 +21,16 @@ body {
 }
 
 .sidebar {
-    width: 350px;
+    width: var(--sidebar-width);
     position: absolute;
     top: 0;
     left: 0;
+    background-color: #3f72af;
+}
+
+.sidebar_deactive {
+    width: var(--sidebar-width-deactive);
+    text-align: left;
 }
 
 .sidebar_header {
@@ -27,11 +38,19 @@ body {
     background-color: #112d4e;
     padding: 10px;
     box-sizing: border-box;
+    position: relative;
 }
 
-.sidebar_header_p {
+.sidebar_header_span {
     color: #dbe2ef;
     font-weight: 400;
+}
+
+.sidebar_header i {
+    color: #dbe2ef;
+    position: absolute;
+    left: 85%;
+    top: 13%;
 }
 
 .sidebar_header_input {
@@ -49,6 +68,8 @@ body {
 }
 
 .sidebar_body {
+    box-sizing: border-box;
+    margin: 0;
     width: 100%;
     min-height: 50px;
     background-color: #112d4e;
@@ -56,7 +77,8 @@ body {
 
 .sidebar_body_li {
     width: 100%;
-    height: 50px;
+    margin: 6px 0;
+    height: var(--sidebar-body-li-height);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -68,13 +90,71 @@ body {
     text-decoration: none;
     color: #f9f7f7;
     font-weight: 500;
-    text-align: center;
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.sidebar_a_deactive {
+    display: none !important;
+}
+
+.sidebar_a_active {
+    display: block !important;
+}
+
+.sidebar_body_li a:hover {
+    padding-left: 30px;
+    color: #39a2db;
 }
 
 .sidebar_body_li i {
-    width: 50px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: var(--sidebar-body-li-height);
+    height: 100%;
+    font-size: 22px;
+    color: #dbe2ef;
+}
+
+.sidebar_footer {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #112d4e;
+}
+
+.sidebar_footer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.sidebar_footer img:hover {
+    box-shadow: 2px 2px 20px 10px;
+    opacity: 0.7;
+}
+
+.sidebar_footer a {
+    text-decoration: none;
+    color: #dbe2ef;
+}
+
+.sidebar_footer a:hover {
+    color: #39a2db;
+}
+
+.sidebar_footer i {
+    color: #dbe2ef;
+}
+
+.sidebar_footer i:hover {
+    color: #39a2db;
 }
